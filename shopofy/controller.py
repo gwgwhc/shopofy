@@ -1,5 +1,5 @@
 from .rqmap import load_rqmap, generate_rqmap, get_position
-from .view import get_args, get_power_input, ask_for_file, print_result
+from .view import get_args, get_power_input, print_result
 
 
 class ShopofyController:
@@ -18,13 +18,7 @@ class ShopofyController:
         return get_power_input()
 
     def handle_rqmap(self):
-        if self.args.nomap:
-            return generate_rqmap()
-
         if self.args.rqmap:
             return load_rqmap(self.args.rqmap)
 
-        rqmap_path = ask_for_file()
-        if rqmap_path:
-            return load_rqmap(rqmap_path)
         return generate_rqmap()
