@@ -3,7 +3,7 @@ from setuptools import setup
 
 # Dynamically fetch the version from version.py
 version = {}
-version_file = os.path.join(os.path.dirname(__file__), "version.py")
+version_file = os.path.join(os.path.dirname(__file__), "shopofy/version.py")
 with open(version_file) as f:
     exec(f.read(), version)
 
